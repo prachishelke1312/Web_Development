@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CALCULATOR</title>
+  </head>
+  <body>
+    <h2>CALCULATOR</h2>
+    <input id="a" type="number"><br><br>
+    <input id="b" type="number"><br><br>
+
+    <select id="op">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select><br><br>
+
+    <button onclick="calc()">=</button>
+    <p id="ans"></p>
+
+    <script>
+      function calc(){
+        let a=+document.getElementById("a").value;
+        let b=+document.getElementById("b").value;
+        let op=document.getElementById("op").value;
+        let r;
+
+        switch(op){
+          case "+": r=a+b;break;
+          case "-": r=a-b;break;
+          case "*": r=a*b;break;
+          case "/": r=(b==0)?"error":a+b;
+        }
+        document.getElementById("ans").innerHTML=r;
+      }
+    </script>
+  </body>
+</html>

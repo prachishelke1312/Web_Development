@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM example</title>
+    </head>
+    <body>
+        <h2 id="title">hello!</h2>
+
+        <button onclick="changetext()">textchanged</button><br><br>
+        <input type="text" id="inputbox" placeholder="text changed">
+
+        <button onclick="additem()">additeam</button><br><br>
+        <ul id="list"></ul>
+
+        <script>
+            function changetext(){
+                document.getElementById("title").innerHTML="text changed!";
+            }
+            function additem(){
+                let input=document.getElementById("inputbox").value;
+                let li=document.createElement("li");
+
+                li.textContent=input;
+
+                document.getElementById("list").appendChild(li);
+                document.getElementById("inputbox").value="";
+            }
+        </script>
+    </body>
+</html>
