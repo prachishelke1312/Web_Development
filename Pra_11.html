@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Manipulation</title>
+</head>
+<body>
+
+<h2>String Manipulation Program</h2>
+
+<form method="post">
+    Enter a String:
+    <input type="text" name="str" required>
+    <br><br>
+
+    <input type="submit" name="submit" value="Process">
+</form>
+
+<?php
+if(isset($_POST['submit'])) {
+
+    $str = $_POST['str'];
+
+    echo "<h3>Results:</h3>";
+
+    // String Length
+    echo "Length: " . strlen($str) . "<br>";
+
+    // Reverse String
+    echo "Reverse: " . strrev($str) . "<br>";
+
+    // Substring
+    echo "Substring: " . substr($str, 0, 5);
+}
+?>
+
+</body>
+</html>
